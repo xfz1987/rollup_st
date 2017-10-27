@@ -1,0 +1,8 @@
+$color-heading: #111;
+
+.test{
+	color: #ddd;
+	a{
+		display:inline-block;
+	}
+}
