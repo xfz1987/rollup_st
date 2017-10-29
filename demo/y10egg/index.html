@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" id="meta">
+    <meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>华夏保险</title>
+	<style>
+		body,html{
+			margin: 0;padding: 0;background: #fff;
+		}
+		#app.load:after{
+			content: "";position: fixed;width: 10vw;height: 10vw;border: #ccc solid 1vw;left: 50%;top: 50%;margin: -5vw -5vw;border-left: none;border-radius: 50%;-webkit-animation: load 2s linear infinite;animation: load 2s linear infinite;box-sizing: border-box;
+		}
+		@-webkit-keyframes load{
+			0%{-webkit-transform: rotate(0deg);}
+			100%{-webkit-transform: rotate(360deg);}
+		}
+		@keyframes load{
+			0%{transform: rotate(0deg);}
+			100%{transform: rotate(360deg);}
+		}
+	</style>
+	<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div id="app" class="load">
+	<transition name="custom-classes-transition" :enter-active-class="forward ? 'animated slideInRight' : 'animated slideInLeft'" :leave-active-class="forward ? 'animated slideOutLeft' : 'animated slideOutRight'">
+        <router-view></router-view>
+    </transition>
+</div>
+<script type="text/javascript" src="js/require.min.js" data-main="js/app"></script>
+<!-- <script src="js/main.min.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,16 @@
+@charset 'utf-8';
+
+$gray:#f0f0f0;
+body{
+	margin:0;background:$gray;transform:scale(.8);
+}
+.div{
+	width:20*10-50px;background:red;height:100px;transform:scale(1.2);
+	.box &{
+		display:none;
+	}
+}
+@keyframes move {
+	0%{opacity: 0;}
+	100%{opacity:1;}
+}
